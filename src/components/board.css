@@ -1,0 +1,20 @@
+#board {
+  display:grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  /* border: 1px solid blue; */
+  width: 120px;
+}
+.box {
+  /* display: inline-grid; */
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  /* border: 1px solid red; */
+}
+.box.clicked {
+  background-color: red;
+}
+.box.hidden {
+  visibility: hidden;
+}

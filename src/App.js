@@ -4,6 +4,7 @@ import NavBar from './components/navbar';
 import Counters from './components/counters';
 import React, { Component } from 'react';
 import Game from './components/game';
+import Board from './components/board';
 class App extends Component {
   state = {
       counters: [
@@ -11,7 +12,8 @@ class App extends Component {
           {id: 2, value: 0},
           {id: 3, value: 0},
           {id: 4, value: 0},
-      ]
+      ],
+      others: 'haha'
   }
   
   //hard code data. bad place and bad behavior
@@ -29,7 +31,7 @@ class App extends Component {
   }
 
   handleIncrement = counter => {
-      console.log(counter)
+      // console.log(counter)
       const counters = [...this.state.counters]
       const index = counters.indexOf(counter)
       counters[index] = {...counter}
@@ -54,6 +56,7 @@ class App extends Component {
         onDelete={this.handleDelete}
         counters={this.state.counters} />
       </main>
+      <Board/>
     </React.Fragment>
   );
   }
